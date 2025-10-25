@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gentil Bigirumuremyi — Portfolio</title>
+  <meta name="description" content="Gentil Bigirumuremyi — personal site: blog, photos, videos, contact." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{
+      --accent-1: #7C3AED;
+      --accent-2: #06B6D4;
+      --accent-3: #F472B6;
+    }
+    .gradient-hero{ background: linear-gradient(135deg,var(--accent-1), var(--accent-2) 45%, var(--accent-3)); }
+    .glass{ backdrop-filter: blur(6px); background-color: rgba(255,255,255,0.06); }
+    .dark .glass{ background-color: rgba(0,0,0,0.35); }
+    .obj-cover{ object-fit: cover; }
+  </style>
+</head>
+<body class="antialiased text-slate-900 bg-gradient-to-br from-white via-slate-50 to-white dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 transition-colors duration-500">
+  <script>
+    const userPref = localStorage.getItem('theme');
+    function applyTheme(theme){
+      if(theme==='dark') document.documentElement.classList.add('dark');
+      else document.documentElement.classList.remove('dark');
+    }
+    if(userPref) applyTheme(userPref);
+    else{
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      applyTheme(prefersDark ? 'dark' : 'light');
+    }
+  </script>
+
+  <!-- NAV -->
+  <header class="fixed top-4 left-1/2 transform -translate-x-1/2 z-30 w-[92%] max-w-5xl">
+    <nav class="glass rounded-2xl px-4 py-2 flex items-center justify-between gap-4 shadow-lg">
+      <div class="flex items-center gap-4">
+        <a href="#home" class="flex items-center gap-3 no-underline">
+          <div class="h-10 w-10 rounded-full gradient-hero flex items-center justify-center text-white font-bold">GB</div>
+          <span class="hidden sm:inline-block font-semibold">Gentil Bigirumuremyi</span>
+        </a>
+      </div>
+      <div class="hidden md:flex items-center gap-3">
+        <a href="#about" class="px-3 py-2 rounded hover:bg-white/10">About</a>
+        <a href="#blog" class="px-3 py-2 rounded hover:bg-white/10">Blog</a>
+        <a href="#photos" class="px-3 py-2 rounded hover:bg-white/10">Photos</a>
+        <a href="#videos" class="px-3 py-2 rounded hover:bg-white/10">Videos</a>
+        <a href="#contact" class="px-3 py-2 rounded hover:bg-white/10">Contact</a>
+      </div>
+      <div class="md:hidden">
+        <button id="menuBtn" class="p-2 glass rounded">Menu</button>
+      </div>
+    </nav>
+    <div id="mobileMenu" class="mt-2 hidden glass rounded-2xl p-3 shadow-lg">
+      <a href="#about" class="block py-1">About</a>
+      <a href="#blog" class="block py-1">Blog</a>
+      <a href="#photos" class="block py-1">Photos</a>
+      <a href="#videos" class="block py-1">Videos</a>
+      <a href="#contact" class="block py-1">Contact</a>
+    </div>
+  </header>
+
+  <main class="pt-28">
+    <!-- HERO / HOME -->
+    <section id="home" class="min-h-screen flex items-center">
+      <div class="w-full max-w-5xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div class="space-y-6">
+          <h1 class="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight">Gentil Bigirumuremyi</h1>
+          <div class="mt-6 flex items-center gap-3">
+            <a href="#blog" class="inline-block px-6 py-3 rounded-2xl font-semibold gradient-hero text-white shadow-lg">Read my blog</a>
+            <a href="#contact" class="inline-block px-4 py-3 rounded-2xl glass">Contact me</a>
+          </div>
+          <div class="mt-6 flex items-center gap-3">
+            <a href="#" aria-label="Twitter" class="p-2 rounded-full glass">Twitter</a>
+            <a href="#" aria-label="LinkedIn" class="p-2 rounded-full glass">LinkedIn</a>
+            <a href="#" aria-label="Instagram" class="p-2 rounded-full glass">Instagram</a>
+          </div>
+        </div>
+        <div class="hidden lg:block">
+          <div class="rounded-3xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition">
+            <div class="h-96 gradient-hero flex items-center justify-center text-white text-center p-6">
+              <div>
+                <h2 class="text-3xl font-extrabold">Welcome to my blog</h2>
+                <p class="mt-2 text-lg">Short articles, photos & videos — sharing insights, thoughts, and topics that spark curiosity.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-24">
+      <div class="max-w-5xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+          <div class="lg:col-span-2">
+            <h3 class="text-3xl font-bold">About</h3>
+            <p class="mt-4 text-lg">Hello — I'm Gentil.<br>
+            Majoring in International Business and minoring in Data Science. I enjoy exploring global trade, supply chains, and writing blogs on a variety of topics that inspire curiosity.</p>
+            <ul class="mt-4 space-y-2">
+              <li class="flex items-start gap-3"><span class="font-semibold">Education:</span> Bachelor of Business Administration — International Business, Minor in Data Science, and FITT Diploma (expected April/June 2027)</li>
+              <li class="flex items-start gap-3"><span class="font-semibold">Interests:</span> International business and data-driven insights, sports, and faith</li>
+            </ul>
+          </div>
+          <div class="flex justify-center lg:justify-end">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop" alt="Gentil" class="w-56 h-56 rounded-2xl object-cover shadow-lg" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG -->
+    <section id="blog" class="py-24 bg-gradient-to-b from-white/60 to-transparent dark:from-slate-800/40">
+      <div class="max-w-5xl mx-auto px-6 lg:px-8">
+        <h3 class="text-3xl font-bold">Blog</h3>
+        <p class="mt-2 text-slate-600 dark:text-slate-300">Short articles on topics that interest me — click to read more.</p>
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <article class="p-4 rounded-2xl shadow-md hover:shadow-xl transition bg-white dark:bg-slate-800">
+            <a href="#" class="no-underline">
+              <h4 class="text-xl font-semibold">Sample Article</h4>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Placeholder text for your blog article.</p>
+              <div class="mt-4 text-xs text-slate-500">Oct 24, 2025 • 3 min read</div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHOTOS -->
+    <section id="photos" class="py-24">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <h3 class="text-3xl font-bold">Photos</h3>
+        <p class="mt-2 text-slate-600 dark:text-slate-300">A small gallery of my favorite shots.</p>
+        <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=800&auto=format&fit=crop" class="w-full h-40 rounded-lg obj-cover shadow" alt="photo1"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEOS -->
+    <section id="videos" class="py-24 bg-gradient-to-b from-white/60 to-transparent dark:from-slate-800/40">
+      <div class="max-w-5xl mx-auto px-6 lg:px-8">
+        <h3 class="text-3xl font-bold">Videos</h3>
+        <p class="mt-2 text-slate-600 dark:text-slate-300">A few embedded videos — swap with your own YouTube links.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-24">
+      <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+        <h3 class="text-3xl font-bold">Contact</h3>
+        <p class="mt-2 text-slate-600 dark:text-slate-300">Have a question or a project? Email me or use the quick form below.</p>
+        <div class="mt-6 text-sm text-slate-700 dark:text-slate-300">Email: <a class="underline" href="mailto:bidjibril@gmail.com">bidjibril@gmail.com</a></div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8">
+      <div class="max-w-5xl mx-auto px-6 lg:px-8 text-center text-sm text-slate-500">
+        <span id="copyright"></span>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // mobile menu toggle & smooth scroll
+    document.getElementById('menuBtn').addEventListener('click', ()=>{
+      const m = document.getElementById('mobileMenu'); 
+      m.classList.toggle('hidden');
+    });
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const target = document.querySelector(a.getAttribute('href'));
+        if(target){ 
+          e.preventDefault(); 
+          target.scrollIntoView({behavior:'smooth', block:'start'}); 
+          const menu = document.getElementById('mobileMenu'); 
+          if(!menu.classList.contains('hidden')) menu.classList.add('hidden'); 
+        }
+      })
+    });
+
+    // set dynamic copyright
+    document.getElementById('copyright').textContent = "© " + new Date().getFullYear() + " Gentil Bigirumuremyi";
+  </script>
+</body>
+</html>
