@@ -32,32 +32,34 @@
     }
   </script>
 
-  <!-- NAV -->
-  <header class="fixed top-4 left-1/2 transform -translate-x-1/2 z-30 w-[92%] max-w-5xl">
-    <nav class="glass rounded-2xl px-4 py-2 flex items-center justify-between gap-4 shadow-lg">
-      <div class="flex items-center gap-4">
-        <a href="#about" class="flex items-center gap-3 no-underline">
-          <div class="h-10 w-10 rounded-full gradient-hero flex items-center justify-center text-white font-bold">GB</div>
-          <span class="hidden sm:inline-block font-semibold">Gentil Bigirumuremyi</span>
-        </a>
-      </div>
-      <div class="hidden md:flex items-center gap-3">
-        <a href="#blog" class="px-3 py-2 rounded hover:bg-white/10">Blog</a>
-        <a href="https://www.linkedin.com/in/gentil-bigirumuremyi-304689225/" target="_blank" class="px-3 py-2 rounded hover:bg-white/10">LinkedIn</a>
-        <a href="#media" class="px-3 py-2 rounded hover:bg-white/10">Media</a>
-        <a href="#contact" class="px-3 py-2 rounded hover:bg-white/10">Contact</a>
-      </div>
-      <div class="md:hidden">
-        <button id="menuBtn" class="p-2 glass rounded">Menu</button>
-      </div>
-    </nav>
-    <div id="mobileMenu" class="mt-2 hidden glass rounded-2xl p-3 shadow-lg">
-      <a href="#blog" class="block py-1">Blog</a>
-      <a href="https://www.linkedin.com/in/gentil-bigirumuremyi-304689225/" target="_blank" class="block py-1">LinkedIn</a>
-      <a href="#media" class="block py-1">Media</a>
-      <a href="#contact" class="block py-1">Contact</a>
+ <!-- NAV / HEADER -->
+<header class="fixed top-0 left-0 w-full z-30 bg-transparent px-6 py-4">
+  <nav class="max-w-5xl mx-auto flex items-center justify-between">
+    <!-- Name on the left -->
+    <a href="#about" class="font-bold text-xl no-underline hover:opacity-80">
+      Gentil Bigirumuremyi
+    </a>
+
+    <!-- Navigation links on the right -->
+    <div class="hidden md:flex items-center gap-6">
+      <a href="#blog" class="hover:underline">Blog</a>
+      <a href="#media" class="hover:underline">Media</a>
+      <a href="#contact" class="hover:underline">Contact</a>
     </div>
-  </header>
+
+    <!-- Mobile menu button -->
+    <div class="md:hidden">
+      <button id="menuBtn" class="p-2 rounded glass">Menu</button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="hidden mt-2 bg-white/20 dark:bg-slate-800/40 rounded-xl p-4">
+    <a href="#blog" class="block py-1">Blog</a>
+    <a href="#media" class="block py-1">Media</a>
+    <a href="#contact" class="block py-1">Contact</a>
+  </div>
+</header>
 
   <main class="pt-28">
     <!-- HERO / ABOUT -->
@@ -181,3 +183,4 @@
   </script>
 </body>
 </html>
+
